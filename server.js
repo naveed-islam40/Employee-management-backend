@@ -6,7 +6,13 @@ const adminRouter = require("./routes/Admin")
 const employeeRouter = require("./routes/employeeRoutes")
 
 
-app.use(cors())
+app.use(cors(
+    {
+        origin: "https://employee-management-frontend-delta.vercel.app/",
+        credentials: true,
+        allowedHeaders: ["Content-Type", "Authorization"]
+    }
+))
 app.use(express.json())
 
 const dbConnect = require("./DB/dbConnect")
