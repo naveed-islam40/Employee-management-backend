@@ -1,0 +1,27 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/"
+      }
+    ],
+    "env": {
+      "API_URL": "https://api.example.com",
+      "NODE_ENV": "production"
+    },
+    "ignoreFiles": [
+      ".gitignore",
+      "README.md",
+      "tests/",
+      ".env"
+    ],
+    "outputDirectory": "dist"
+  }
+  
