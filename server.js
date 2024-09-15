@@ -8,7 +8,7 @@ const employeeRouter = require("./routes/employeeRoutes")
 
 app.use(cors(
     {
-        origin: "https://employee-management-frontend-eeg603r1l.vercel.app",
+        origin: "https://employee-management-frontend-delta.vercel.app",
         credentials: true,
         allowedHeaders: ["Content-Type", "Authorization"]
     }
