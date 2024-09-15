@@ -1,21 +1,19 @@
 {
-    "version": 2,
-    "builds": [
+  "version": 2,
+  "builds": [
       {
-        "src": "package.json",
-        "use": "@vercel/node"
+          "src": "server.js",
+          "use": "@vercel/node"
       }
-    ],
-    "routes": [
+  ],
+  "routes": [
       {
-        "src": "/(.*)",
-        "dest": "/"
+          "src": "/(.*)",
+          "dest": "server.js",
+          "methods": ["GET", "POST","PUT", "PATCH", "DELETE", "OPTIONS"],
+          "headers": {
+              "Access-Control-Allow-Origin": "*"
+          }
       }
-    ],
-    "env": {
-      "API_URL": "https://api.example.com",
-      "NODE_ENV": "production"
-    },
-    "outputDirectory": "dist"
-  }
-  
+  ]
+}
